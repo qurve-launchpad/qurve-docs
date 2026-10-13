@@ -1,0 +1,372 @@
+/* ═══════════════════════════════════════════════════════════════
+   QURVE DOCS — Theme
+   Terminal/cyber aesthetic matching qurve.fun
+   ═══════════════════════════════════════════════════════════════ */
+
+:root {
+  /* Font — match app */
+  --vp-font-family-base: "JetBrains Mono", "IBM Plex Mono", ui-monospace,
+    SFMono-Regular, Menlo, Monaco, monospace;
+  --vp-font-family-mono: "JetBrains Mono", "IBM Plex Mono", ui-monospace,
+    monospace;
+
+  /* Brand */
+  --vp-c-brand-1: #00ff9c;
+  --vp-c-brand-2: #00cc7d;
+  --vp-c-brand-3: #059669;
+  --vp-c-brand-soft: rgba(0, 255, 156, 0.14);
+
+  --vp-c-tip-1: #00ff9c;
+  --vp-c-tip-soft: rgba(0, 255, 156, 0.14);
+  --vp-c-warning-1: #ffb000;
+  --vp-c-warning-soft: rgba(255, 176, 0, 0.14);
+  --vp-c-danger-1: #ff3860;
+  --vp-c-danger-soft: rgba(255, 56, 96, 0.14);
+}
+
+/* ─────────────── DARK (default) ─────────────── */
+.dark {
+  --vp-c-bg: #0a0e0a;
+  --vp-c-bg-alt: #0f1620;
+  --vp-c-bg-elv: #131c2e;
+  --vp-c-bg-soft: #131c2e;
+
+  --vp-c-divider: #1e293b;
+  --vp-c-gutter: #0a0e0a;
+
+  --vp-c-text-1: #f1f5f9;
+  --vp-c-text-2: #cbd5e1;
+  --vp-c-text-3: #94a3b8;
+
+  --vp-c-default-1: #1e293b;
+  --vp-c-default-2: #1e293b;
+  --vp-c-default-3: #334155;
+  --vp-c-default-soft: rgba(30, 41, 59, 0.5);
+
+  --vp-c-brand-1: #00ff9c;
+  --vp-c-brand-2: #00cc7d;
+  --vp-c-brand-3: #059669;
+  --vp-c-brand-soft: rgba(0, 255, 156, 0.16);
+
+  --vp-button-brand-bg: #00ff9c;
+  --vp-button-brand-hover-bg: #00cc7d;
+  --vp-button-brand-active-bg: #059669;
+  --vp-button-brand-text: #0a0e0a;
+  --vp-button-brand-border: transparent;
+
+  --vp-code-block-bg: #0f1620;
+  --vp-code-line-highlight-color: rgba(0, 255, 156, 0.08);
+  --vp-code-copy-code-bg: rgba(0, 255, 156, 0.1);
+  --vp-code-copy-code-hover-bg: rgba(0, 255, 156, 0.2);
+}
+
+/* ─────────────── LIGHT ─────────────── */
+html:not(.dark) {
+  --vp-c-bg: #fafaf5;
+  --vp-c-bg-alt: #f0f0ea;
+  --vp-c-bg-elv: #fffffa;
+  --vp-c-bg-soft: #e8e8e0;
+
+  --vp-c-divider: #d4d4c8;
+  --vp-c-gutter: #fafaf5;
+
+  --vp-c-text-1: #0a0e0a;
+  --vp-c-text-2: #1e293b;
+  --vp-c-text-3: #334155;
+
+  --vp-c-brand-1: #059669;
+  --vp-c-brand-2: #047857;
+  --vp-c-brand-3: #065f46;
+  --vp-c-brand-soft: rgba(5, 150, 105, 0.12);
+
+  --vp-button-brand-bg: #059669;
+  --vp-button-brand-hover-bg: #047857;
+  --vp-button-brand-active-bg: #065f46;
+  --vp-button-brand-text: #ffffff;
+
+  --vp-code-block-bg: #f0f0ea;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   LAYOUT TWEAKS
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Grid background pattern (dark only) */
+.dark body {
+  background-color: #0a0e0a;
+  background-image:
+    linear-gradient(rgba(0, 255, 156, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 156, 0.03) 1px, transparent 1px);
+  background-size: 24px 24px;
+  background-attachment: fixed;
+}
+
+/* Headings — terminal vibes */
+.vp-doc h1 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.vp-doc h2 {
+  border-top: 1px dashed var(--vp-c-divider);
+  padding-top: 24px;
+  margin-top: 40px;
+  font-weight: 600;
+}
+
+.vp-doc h3 {
+  font-weight: 600;
+}
+
+/* Links */
+.vp-doc a {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 3px;
+  font-weight: 500;
+}
+
+.vp-doc a:hover {
+  text-decoration-style: solid;
+}
+
+/* Inline code */
+.vp-doc :not(pre) > code {
+  background-color: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-divider);
+  padding: 2px 6px;
+  font-weight: 500;
+  color: var(--vp-c-brand-1);
+}
+
+/* Code blocks */
+.vp-doc div[class*="language-"] {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 0;
+}
+
+/* Tables */
+.vp-doc table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 13px;
+}
+
+.vp-doc tr {
+  background-color: transparent !important;
+  border-top: 1px solid var(--vp-c-divider);
+}
+
+.vp-doc tr:nth-child(2n) {
+  background-color: var(--vp-c-bg-alt) !important;
+}
+
+.vp-doc th,
+.vp-doc td {
+  border: 1px solid var(--vp-c-divider);
+  padding: 8px 12px;
+}
+
+.vp-doc th {
+  background-color: var(--vp-c-bg-soft) !important;
+  font-weight: 600;
+  color: var(--vp-c-brand-1);
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+}
+
+/* Blockquote */
+.vp-doc blockquote {
+  border-left: 3px solid var(--vp-c-brand-1);
+  background-color: var(--vp-c-bg-soft);
+  padding: 12px 20px;
+  margin: 16px 0;
+}
+
+.vp-doc blockquote > p {
+  margin: 0;
+  color: var(--vp-c-text-2);
+  font-size: 13px;
+}
+
+/* Custom containers (tip, warning, etc) */
+.vp-doc .custom-block {
+  border-radius: 0;
+  border-left-width: 3px;
+  padding: 12px 20px;
+}
+
+.vp-doc .custom-block .custom-block-title {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+}
+
+/* Sidebar */
+.VPSidebarItem.level-0 > .item > .text {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--vp-c-brand-1);
+}
+
+.VPSidebarItem .link:hover .text {
+  color: var(--vp-c-brand-1);
+}
+
+.VPSidebarItem .is-active > .link .text {
+  color: var(--vp-c-brand-1);
+  font-weight: 600;
+}
+
+/* Nav bar */
+.VPNavBar {
+  border-bottom: 1px solid var(--vp-c-divider);
+  background-color: rgba(10, 14, 10, 0.85);
+  backdrop-filter: blur(12px);
+}
+
+html:not(.dark) .VPNavBar {
+  background-color: rgba(250, 250, 245, 0.85);
+}
+
+.VPNavBarTitle .title {
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--vp-c-brand-1);
+}
+
+/* Nav links */
+.VPNavBarMenuLink {
+  font-family: var(--vp-font-family-mono);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.VPNavBarMenuLink:hover,
+.VPNavBarMenuLink.active {
+  color: var(--vp-c-brand-1) !important;
+}
+
+/* Logo glow */
+.VPNavBarTitle .logo {
+  filter: drop-shadow(0 0 6px rgba(0, 255, 156, 0.4));
+}
+
+/* Hero section (home page) */
+.VPHero .name {
+  color: var(--vp-c-brand-1);
+  font-weight: 800;
+}
+
+.VPHero .text {
+  font-weight: 700;
+}
+
+.VPHero .tagline {
+  font-size: 15px;
+  color: var(--vp-c-text-2);
+}
+
+/* Feature cards */
+.VPFeature {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 0;
+  background-color: var(--vp-c-bg-alt);
+  transition: border-color 0.15s ease;
+}
+
+.VPFeature:hover {
+  border-color: var(--vp-c-brand-1);
+}
+
+.VPFeature .icon {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.VPFeature .title {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--vp-c-brand-1);
+}
+
+.VPFeature .details {
+  font-size: 12px;
+  color: var(--vp-c-text-2);
+  line-height: 1.6;
+}
+
+/* Home actions */
+.VPButton.brand {
+  border-radius: 0;
+  font-family: var(--vp-font-family-mono);
+  font-weight: 600;
+}
+
+.VPButton.alt {
+  border-radius: 0;
+  font-family: var(--vp-font-family-mono);
+  font-weight: 500;
+  border: 1px solid var(--vp-c-divider);
+}
+
+/* Search box */
+.DocSearch-Button {
+  border-radius: 0 !important;
+  background-color: var(--vp-c-bg-soft) !important;
+  border: 1px solid var(--vp-c-divider) !important;
+}
+
+/* Footer */
+.VPFooter {
+  border-top: 1px solid var(--vp-c-divider);
+  background-color: var(--vp-c-bg-alt);
+  font-size: 12px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--vp-c-bg-alt);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--vp-c-divider);
+  border: 2px solid var(--vp-c-bg-alt);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--vp-c-brand-1);
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .dark body {
+    background-size: 16px 16px;
+  }
+
+  .vp-doc h2 {
+    margin-top: 32px;
+    padding-top: 20px;
+  }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
