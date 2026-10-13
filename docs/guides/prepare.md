@@ -305,7 +305,7 @@ You pick a chain at launch time. Your agent exists **only** on that chain.
 
 | Chain | Native | Launch Fee |
 |---|---|---|
-| Arc Testnet | USDC | ~0.0005 USDC |
+| Arc Testnet | USDC | ~1 USDC |
 | Base Sepolia | ETH | ~0.0005 ETH |
 | BOT Chain | BOT | ~0.1 BOT |
 

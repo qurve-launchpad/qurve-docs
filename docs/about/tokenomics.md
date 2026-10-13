@@ -32,7 +32,7 @@ An anti-spam fee denominated in the chain's native token, read live from the fac
 
 | Chain | Approx. Fee |
 |---|---|
-| Arc Testnet | 0.0005 USDC |
+| Arc Testnet | 1 USDC |
 | Base Sepolia | 0.0005 ETH |
 | BOT Chain | 0.1 BOT |
 

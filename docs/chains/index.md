@@ -44,7 +44,7 @@ Launch fees vary because the anti-spam amount is denominated in native:
 
 | Chain | Approx. Fee |
 |---|---|
-| Arc Testnet | 0.0005 USDC |
+| Arc Testnet | 1 USDC |
 | Base Sepolia | 0.0005 ETH |
 | BOT Chain | 0.1 BOT |
 

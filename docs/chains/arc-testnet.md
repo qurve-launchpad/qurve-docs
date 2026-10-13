@@ -62,7 +62,7 @@ The `AgentSwapRouter` handles the decimal conversion (`nativeToQuoteDecimalOffse
 ## Launch Fee
 
 ```
-~0.0005 USDC
+~1 USDC
 ```
 
 Read live via `factory.launchFee()`. Cache TTL is 5 minutes.
@@ -93,7 +93,7 @@ All transactions, agent launches, and trade events are visible on [explorer.test
 
 Arc Testnet USDC is available via the Arc faucet (see [arc.io](https://arc.io) for current faucet URL). You need enough for:
 
-- Launch fee (~0.0005 USDC)
+- Launch fee (~1 USDC)
 - Optional dev buy
 - Gas (minimal)
 

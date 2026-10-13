@@ -167,8 +167,7 @@ export default defineConfig({
     socialLinks: [
       { icon: "github", link: "https://github.com/qurve-launchpad" },
       { icon: "twitter", link: "https://twitter.com/qurve_fun" },
-      { icon: "discord", link: "https://discord.gg/qurve" },
-      { icon: "telegram", link: "https://t.me/qurve_fun" },
+      { icon: "telegram", link: "https://t.me/qurvecommunity" },
     ],
 
     search: {
